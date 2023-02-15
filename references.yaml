@@ -1,0 +1,11 @@
+name: backend
+componentName: github.com/weaveworks/backend
+version: v1.0.2
+---
+name: frontend
+componentName: github.com/weaveworks/frontend
+version: v1.0.2
+---
+name: cache
+componentName: github.com/weaveworks/cache
+version: v1.0.0

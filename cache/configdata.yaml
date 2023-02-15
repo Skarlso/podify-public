@@ -1,0 +1,12 @@
+apiVersion: config.ocm.software/v1alpha1
+kind: ConfigData
+metadata:
+  name: redis-config
+  labels:
+    env: test
+configuration: {}
+localization:
+- resource:
+    name: image
+  file: deploy.yaml
+  image: spec.template.spec.containers[0].image

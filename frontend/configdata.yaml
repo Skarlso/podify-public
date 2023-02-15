@@ -1,0 +1,24 @@
+apiVersion: config.ocm.software/v1alpha1
+kind: ConfigData
+metadata:
+  name: ocm-config
+  labels:
+    env: test
+configuration:
+  defaults:
+    color: red
+  schema:
+    type: object
+    additionalProperties: false
+    properties:
+      color:
+        type: string
+  rules:
+  - value: (( color ))
+    file: configmap.yaml
+    path: data.PODINFO_UI_COLOR
+localization:
+- resource:
+    name: image
+  file: deploy.yaml
+  image: spec.template.spec.containers[0].image
