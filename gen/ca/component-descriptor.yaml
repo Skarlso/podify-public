@@ -1,0 +1,19 @@
+apiVersion: ocm.software/v3alpha1
+kind: ComponentVersion
+metadata:
+  name: github.com/weaveworks/podify
+  provider:
+    name: weaveworks
+  version: v1.0.3-dev
+repositoryContexts: []
+spec:
+  references:
+  - componentName: github.com/weaveworks/backend
+    name: backend
+    version: v1.0.2
+  - componentName: github.com/weaveworks/frontend
+    name: frontend
+    version: v1.0.2
+  - componentName: github.com/weaveworks/cache
+    name: cache
+    version: v1.0.0

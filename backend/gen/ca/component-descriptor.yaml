@@ -1,0 +1,33 @@
+apiVersion: ocm.software/v3alpha1
+kind: ComponentVersion
+metadata:
+  name: github.com/weaveworks/backend
+  provider:
+    name: weaveworks
+  version: v1.0.2
+repositoryContexts: []
+spec:
+  resources:
+  - access:
+      localReference: sha256.ea32e84bdf0eb0dc5ae2d49bee2b80ec23a6642fc98cbffd4c443a3900a65a8f
+      mediaType: application/yaml
+      type: localBlob
+    name: config
+    relation: local
+    type: configdata.ocm.software
+    version: v1.0.2
+  - access:
+      imageReference: ghcr.io/stefanprodan/podinfo:6.2.0
+      type: ociArtifact
+    name: image
+    relation: external
+    type: ociImage
+    version: 6.2.0
+  - access:
+      localReference: sha256.8c4fdb0c51806f6babf0cc76222b91a1e374bd4c44f71ecb7d547aef81380cfe
+      mediaType: application/x-tgz
+      type: localBlob
+    name: manifests
+    relation: local
+    type: kustomize.ocm.fluxcd.io
+    version: v1.0.2
